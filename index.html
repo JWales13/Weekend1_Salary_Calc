@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Employee Salary Calculator</title>
+</head>
+<body>
+    <header>
+        <h1>Calculate Employee Salary Cost</h1>
+    </header>
+
+    <div id='inputDiv'>
+        <form id='inputForm'>
+            <input type='text' id='firstName' placeholder='First Name'><br>
+            <input type='text' id='lastName' placeholder='Last Name'><br>
+            <input type='number' id='idNumber' placeholder='Employee ID Number'><br>
+            <input type='text' id='jobTitle' placeholder='Job Title'><br>
+            <input type='number' id='annualSalary' placeholder='Annual Salary'><br>
+        </form>
+    </div>
+    
+    <div id='buttonDiv'>
+        <button id = 'submitButton'>Submit</button>
+    </div>
+        
+    <div id='displayInfoDiv'>
+        <table class = 'resultsTable'>
+            <thead>
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Id Number</td>
+                    <td>Job Title</td>
+                    <td>Annual Salary</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                
+            </tbody>
+            
+            <tfoot>
+                <tr>
+                    <td>Total Montly Cost of All Employees:</td>
+                    <td id = 'calcTotal'>$0</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!-- <div id = 'displayTotalDiv'>
+            <h3>Total Montly Cost of All Employees</h3>
+                <p id = 'calcTotal'></p>
+        </div> -->
+
+        
+    
+</body>
+</html>
