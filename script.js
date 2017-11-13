@@ -2,7 +2,7 @@ $(document).ready(readyNow);
 
 function readyNow(){
    $('#submitButton').on('click', submitInformationClick);
-   $('input[id="deleteBtn"]').click(function(e){
+   $('#deleteBtn').click(function(e){
     $(this).closest('tr').remove()
  })
 };
@@ -38,9 +38,9 @@ function submitInformationClick () {
         '<td>' + Employee.idNumber + '</td>' +
         '<td>' + Employee.jobTitle + '</td>' +
         '<td>' + Employee.annualSalary + '</td>' +
-        '<td><input type="button" value="Delete Employee"></td></tr>');
+        '<td><button id=deleteBtn>Delete Employee</button></td></tr>');
 
-        $('input[id="deleteBtn"]').click(function(e){
+        $('#deleteBtn').click(function(e){
             $(this).closest('tr').remove()
          });
     
