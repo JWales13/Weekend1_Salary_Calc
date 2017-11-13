@@ -2,6 +2,9 @@ $(document).ready(readyNow);
 
 function readyNow(){
    $('#submitButton').on('click', submitInformationClick);
+   $('input[id="deleteBtn"]').click(function(e){
+    $(this).closest('tr').remove()
+ })
 };
 
 var currentMonthlyCostTotal = 0;
@@ -34,7 +37,12 @@ function submitInformationClick () {
         '<td>' + Employee.lastName + '</td>' +
         '<td>' + Employee.idNumber + '</td>' +
         '<td>' + Employee.jobTitle + '</td>' +
-        '<td>' + Employee.annualSalary + '</td></tr>');
+        '<td>' + Employee.annualSalary + '</td>' +
+        '<td><input type="button" value="Delete Employee"></td></tr>');
+
+        $('input[id="deleteBtn"]').click(function(e){
+            $(this).closest('tr').remove()
+         });
     
 }; 
 
